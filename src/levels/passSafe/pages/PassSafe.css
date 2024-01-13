@@ -1,22 +1,81 @@
-.pass-safe-container{
+/* Default styles for larger screens */
+.pass-safe-container {
     display: flex;
     height: 100vh;
     width: 100vw;
-}
-.pass-safe-container-hashed-password{
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/002/191/137/small/abstract-joyful-watercolor-background-free-vector.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .pass-safe-container-hashed-password {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100%;
-    width: 40%;
-}
-
-.pass-safe-container-hashed-password-image{
+    width: 55%;
+  }
+  
+  .pass-safe-container-hashed-password-image {
     height: 60%;
     width: 80%;
-}
-.pass-safe-container-hashed-password-image img{
+  }
+  
+  .pass-safe-container-hashed-password-image img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
-}
-.pass-safe-container-questions{
+    object-fit: contain;
+  }
+  
+  .pass-safe-container-questions {
+    text-align: center;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 4%;
+  }
+  
+  .pass-safe-next-button,.pass-safe-goTo-next {
+    position: absolute;
+    top: 87%;
+    right: 20%;
+    height: 7vh;
+    width: 10vw;
+    border-radius: 10px;
+    background-color: transparent;
+    border : 1px solid black;
+    transition: all ease .5s;
+  }
 
-}
+  .pass-safe-next-button:hover{
+    background-color: rgba(255, 252, 252, 0.237);
+    color: navy;
+  }
+
+  .pass-safe-goTo-next:hover{
+    background-color: rgba(255, 252, 252, 0.237);
+    color: navy;
+  }
+  
+  /* Media query for smaller screens */
+  @media screen and (max-width: 768px) {
+    .pass-safe-container {
+      flex-direction: column; /* Change to a column layout on smaller screens */
+    }
+  
+    .pass-safe-container-hashed-password,
+    .pass-safe-container-questions {
+      width: 100%; /* Take up full width on smaller screens */
+    }
+  
+    .pass-safe-container-hashed-password-image {
+      width: 100%; /* Take up full width on smaller screens */
+    }
+  
+    .pass-safe-next-button {
+      position: static; /* Reset position for smaller screens */
+      margin-top: 10px; /* Add margin for spacing */
+    }
+  }
+  

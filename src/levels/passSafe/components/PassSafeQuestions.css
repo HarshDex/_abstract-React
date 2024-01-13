@@ -1,0 +1,65 @@
+.pass-safe-question-container-question{
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-top: 18%;
+}
+.pass-safe-question-container-options {
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 4%;
+  }
+
+  .pass-safe-question-container-options button{
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    height: 40%;
+    text-align: center;
+    border-radius: 20px;
+    width: 40%;
+    border : 1px solid black;
+    transition: all ease .5s;
+  }
+  
+  .pass-safe-question-container-options button:hover{
+    background-color: rgba(128, 128, 128, 0.237);
+    color: navy;
+  }
+  .pass-safe-question-option {
+    height: 40%; /* 2 options in the 2x2 matrix */
+    width: 45%; /* Adjusted width for better spacing */
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  .pass-safe-question-option:hover {
+    background-color: #f0f0f0;
+  }
+.pass-safe-question-suggestion{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    height: 20vh;
+    width: 40vw;
+}
+@media screen and (max-width: 768px) {
+    .pass-safe-question-container-options button {
+      width: 100%;
+    }
+  
+    .pass-safe-question-suggestion {
+      width: 80vw;
+    }
+}

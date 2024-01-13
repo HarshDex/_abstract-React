@@ -32,8 +32,8 @@ const PassSafe = () => {
 
     if (currentQuestionIndex + 1 < data.length) {
       setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
-      setSelectedOptions({});
       setShowNextButton(false);
+      setSelectedOptions({});
     } else {
       setAllQuestionsAnswered(true);
     }
@@ -66,13 +66,13 @@ const PassSafe = () => {
                 currentQuestionIndex < data.length && (
                 <PassSafeQuestion key={data[currentQuestionIndex].id} {...data[currentQuestionIndex]} selectedOption={selectedOptions[data[currentQuestionIndex].id]} onOptionClick={(optionId) => handleOptionClick(data[currentQuestionIndex].id, optionId)}/>
               )}
-              {showNextButton && (
-                <button onClick={checkAnswersAndMoveNext} disabled={!selectedOptions[data[currentQuestionIndex].id]}>
+              {showNextButton && !allQuestionsAnswered &&  (
+                <button className='pass-safe-next-button' onClick={checkAnswersAndMoveNext} disabled={!selectedOptions[data[currentQuestionIndex].id]}>
                   Next
                 </button>
               )}
               {allQuestionsAnswered && (
-                <button onClick={goToNextPage}>Go to Next Page</button>
+                <button className = 'pass-safe-goTo-next' onClick={goToNextPage}>Continue</button>
               )}
             </div>
         </div>
