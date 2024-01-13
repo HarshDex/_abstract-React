@@ -28,8 +28,8 @@
   }
   
   .pass-safe-question-container-options button:hover{
-    background-color: rgba(128, 128, 128, 0.237);
-    color: navy;
+    background-color: rgba(61, 61, 61, 0.114);
+    color: rgb(0, 0, 81);
   }
   .pass-safe-question-option {
     height: 40%; /* 2 options in the 2x2 matrix */

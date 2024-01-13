@@ -5,9 +5,9 @@ import PassSafeQuestion from '../components/PassSafeQuestion';
 import { data } from '../../../redux/slice/PasswordSlice';
 import PasswordDataImage from '../../../assets/PasswordData.png'
 import './PassSafe.css'
+import { Link } from 'react-router-dom';
 const PassSafe = () => {
   const dispatch = useDispatch();
-  const [complete,setComplete] = useState(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOptions, setSelectedOptions] = useState({});
   const [showNextButton, setShowNextButton] = useState(false);
@@ -42,43 +42,34 @@ const PassSafe = () => {
   const goToNextPage = () => {
     // Implement logic to navigate to the next page
     console.log('Navigate to next page');
-    setComplete(true);
   };
 
-  return (
-    <>
-      {
-        complete ? (
-            <>
-              <p>Congratulations for completion
-              </p>
-            </>
-        ) 
-        : (
-            <div className="pass-safe-container">
-              <div className="pass-safe-container-hashed-password">
-                <div className="pass-safe-container-hashed-password-image">
-                  <img src={PasswordDataImage} alt="" />
-                </div>
-              </div>
-              <div className="pass-safe-container-questions">
-              {
-                currentQuestionIndex < data.length && (
-                <PassSafeQuestion key={data[currentQuestionIndex].id} {...data[currentQuestionIndex]} selectedOption={selectedOptions[data[currentQuestionIndex].id]} onOptionClick={(optionId) => handleOptionClick(data[currentQuestionIndex].id, optionId)}/>
-              )}
-              {showNextButton && !allQuestionsAnswered &&  (
-                <button className='pass-safe-next-button' onClick={checkAnswersAndMoveNext} disabled={!selectedOptions[data[currentQuestionIndex].id]}>
-                  Next
-                </button>
-              )}
-              {allQuestionsAnswered && (
-                <button className = 'pass-safe-goTo-next' onClick={goToNextPage}>Continue</button>
-              )}
+  return(
+        <div className="pass-safe-container">
+          <div className="pass-safe-container-hashed-password">
+            <div className="pass-safe-container-hashed-password-image">
+              <img src={PasswordDataImage} alt="" />
             </div>
+          </div>
+          <div className="pass-safe-container-questions">
+          {
+            currentQuestionIndex < data.length && (
+            <PassSafeQuestion key={data[currentQuestionIndex].id} {...data[currentQuestionIndex]} selectedOption={selectedOptions[data[currentQuestionIndex].id]} onOptionClick={(optionId) => handleOptionClick(data[currentQuestionIndex].id, optionId)}/>
+          )}
+          {showNextButton && !allQuestionsAnswered &&  (
+            <button className='pass-safe-next-button' onClick={checkAnswersAndMoveNext} disabled={!selectedOptions[data[currentQuestionIndex].id]}>
+              Next
+            </button>
+          )}
+          {allQuestionsAnswered && (
+            <Link to={'/'}>
+              <button className = 'pass-safe-goTo-next' onClick={goToNextPage}>
+                Continue
+              </button>
+            </Link>
+          )}
         </div>
-        )
-      }
-    </>
+    </div>
   );
 };
 
