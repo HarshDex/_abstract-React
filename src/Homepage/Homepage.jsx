@@ -4,17 +4,20 @@ import './Homepage.css'
 const Homepage = () => {
   return (
     <div className="home-page-container">
+        <div className="home-page-container-heading">
+            <p>_ABSTRACT</p>
+        </div>
         <div className="home-page-container-levels">
             <Link to={'/passSafe'}>
                 <button>
-                    <p>Go to level 1</p>
-                    <i class="ri-play-fill"></i>
+                    <p>Pass Safe Challenge</p>
+                    <i className="ri-play-fill"></i>
                 </button>
             </Link>
             <Link to={'/dataBreach'}>
                 <button>
-                    <p>Go to level 2</p>
-                    <i class="ri-play-fill"></i>
+                    <p>Data Breach</p>
+                    <i className="ri-play-fill"></i>
                 </button>
             </Link>
         </div>
