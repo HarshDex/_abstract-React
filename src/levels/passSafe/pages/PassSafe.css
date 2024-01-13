@@ -1,0 +1,22 @@
+.pass-safe-container{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+.pass-safe-container-hashed-password{
+    height: 100%;
+    width: 40%;
+}
+
+.pass-safe-container-hashed-password-image{
+    height: 60%;
+    width: 80%;
+}
+.pass-safe-container-hashed-password-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.pass-safe-container-questions{
+
+}
