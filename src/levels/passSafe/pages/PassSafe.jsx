@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { markQuestionAsAnswered } from '../../../redux/slice/PasswordSlice';
 import PassSafeQuestion from '../components/PassSafeQuestion';
@@ -6,13 +6,19 @@ import { data } from '../../../redux/slice/PasswordSlice';
 import PasswordDataImage from '../../../assets/PasswordData.png'
 import './PassSafe.css'
 import { Link } from 'react-router-dom';
+import LoadingScreen from '../../../Loading/LoadingScreen';
 const PassSafe = () => {
   const dispatch = useDispatch();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOptions, setSelectedOptions] = useState({});
   const [showNextButton, setShowNextButton] = useState(false);
   const [allQuestionsAnswered, setAllQuestionsAnswered] = useState(false);
-
+  const [passSafeLoading,passSafeSetLoading] = useState(true);
+  useEffect(()=>{
+    setTimeout(()=>{
+      passSafeSetLoading(false);
+    },2000)
+  },[])
   const handleOptionClick = (questionId, optionId) => {
     setSelectedOptions((prevSelectedOptions) => ({
       ...prevSelectedOptions,
@@ -45,6 +51,10 @@ const PassSafe = () => {
   };
 
   return(
+    <>
+      {passSafeLoading ? (
+        <LoadingScreen/>
+      ) : (
         <div className="pass-safe-container">
           <div className="pass-safe-container-hashed-password">
             <div className="pass-safe-container-hashed-password-image">
@@ -70,6 +80,8 @@ const PassSafe = () => {
           )}
         </div>
     </div>
+      ) }
+    </>
   );
 };
 
