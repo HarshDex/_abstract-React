@@ -1,0 +1,68 @@
+/* DataBreachQuestion.css */
+
+.dataBreachQuestionContainer {
+    flex-direction: column;
+    padding: 2%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    width: 100%;
+    gap: 5%;
+  }
+  
+  .data-breach-question {
+    font-size: 1.5em;
+    color: white;
+    font-weight: 600;
+  }
+  
+
+  
+  .data-breach-operations {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .dataBreachInputField input {
+    height: 3em;
+    width: 80%;
+    background-color: transparent;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.348);
+    padding: 2%;
+    font-size: 1.2em;
+    color: white;
+    outline: none;
+  }
+  
+  .data-breach-operations-button {
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+  }
+  
+  .data-breach-operations-button button {
+    height: 3em;
+    padding: 0 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+  }
+  
+  .data-breach-operations-button button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Add this class for styling correct answers */
+  .correct-answer {
+    color: #2ecc71; /* Green color for correct answers */
+  }
+  

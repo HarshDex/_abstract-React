@@ -1,0 +1,48 @@
+/* DataBreach.css */
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8; /* Set a light background color */
+  }
+  
+  .data-breach-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('https://e0.pxfuel.com/wallpapers/142/1/desktop-wallpaper-dark-blue-background-aesthetic-dark-blue.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .data-breach-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 0px 0px 40px rgba(165, 151, 151, 0.37); */
+    /* border: 2px solid grey; */
+    border: 1px solid rgba(255, 255, 255, 0.503);
+    border-radius: 20px;
+    margin-left : 3%;
+    margin-right: 3%;
+    margin-top: 2%;
+    height: 30%;
+    width: 94%;
+    overflow: hidden; /* Ensure the image doesn't overflow its container */
+  }
+  
+  .data-breach-image img {
+    border-radius: 20px;
+    height: 80%;
+    width: 95%;
+    object-fit: cover; /* Use cover for a more professional look */
+  }
+  .data-breach-questions{
+    height: 50vh;
+    width: 100%;
+    text-align: center;
+    padding : 0% 10%;
+  }
+ 
