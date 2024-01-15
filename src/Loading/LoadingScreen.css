@@ -32,7 +32,7 @@
   
   .loading-bar {
     height: 100%;
-    background-color: #36ed25; /* Adjust the color of the loading bar */
+    background-color: #25b8ed; /* Adjust the color of the loading bar */
     transition: width 0.2s ease-in-out;
   }
   

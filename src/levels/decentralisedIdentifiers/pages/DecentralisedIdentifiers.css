@@ -1,0 +1,152 @@
+.decentralised-identifier-container{
+    min-height: 100vh;
+    width: 100vw;
+    background-color: rgb(26, 26, 26);
+    padding: 1%;
+}
+.decentralised-identifier-border{
+    position: relative;
+    border : 1px solid rgba(255, 255, 255, 0.499);
+    min-height: 100vh;
+    width: 98vw;
+    padding: 4vh;
+    border-radius: 10px;
+    
+}
+.decentralised-identifier-title P{
+    color: rgba(255, 255, 255, 0.582);
+    font-weight: 700;
+    font-size: 4vw;
+}
+.decentralised-identifier-image{
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+}
+.decentralised-identifier-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.decentralised-identifier-ctf{
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+.decentralised-identifier-ctf p{
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.582);
+}
+.decentralised-identifier-code{
+    height: fit-content;
+    width: 100%;
+    border: 1px solid rgba(222, 219, 25, 0.582);
+    padding: 2vh;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    border-radius: 10px;
+}
+.decentralised-identifier-code pre{
+    font-size: 1.1em;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    color: rgba(222, 219, 25, 0.582);
+}
+.decentralised-identifier-question p{
+    margin-top: 3%;
+    font-size: 1.2em;
+    color: rgb(0, 166, 255);
+}
+.decentralised-identifier-operations{
+    height: 10vh;
+    width: 80vw;
+    align-items: center;
+    display: flex;
+    margin: 2% 0;
+    gap: 5%;
+}
+.decentralised-identifier-operations input{
+    height: 90%;
+    width: 60%;
+    border-radius: 20px;
+    border: 1px solid rgba(213, 209, 209, 0.395);
+    padding-left: 3%;
+    font-size: 1.3em;
+    background-color: transparent;
+    color: white;
+}
+.decentralised-identifier-operations button{
+    display: flex;
+    justify-content: center;
+    align-items: cener;
+    padding: 1.3% 3%;
+    border-radius: 20px;
+    background-color: rgb(44, 163, 210);
+    font-size: 1.2em;
+    border: none;
+    color: rgba(255, 255, 255, 0.595);
+    transition: all ease .6s;
+}
+.decentralised-identifier-operations button:hover{
+    background-color: transparent;
+    color: rgba(96, 172, 50, 0.816);
+    border: 1px solid rgba(255, 255, 255, 0.482);
+}
+.decentralised-identifier-result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 40vh; */
+    width: 94vw;
+    border: 1px solid  rgba(213, 209, 209, 0.395);
+    border-radius: 10px;
+    padding : 3% 0;
+}
+.decentralised-identifier-correct{
+    text-align: center;
+    padding: 0% 2%;
+    color: rgba(255, 255, 255, 0.677);
+}
+.decentralised-identifier-correct span{
+    margin-bottom: 1%;
+    font-size: 2vw;
+    display: block;
+    color: rgba(47, 200, 39, 0.662);
+}
+.decentralised-identifier-correct input{
+    border : 1px solid  rgba(47, 200, 39, 0.662);
+}
+.decentralised-identifier-wrong{
+    text-align: center;
+    padding : 0% 2%;
+    color: white;
+}
+.decentralised-identifier-wrong span{
+    font-size:  2vw;
+    color: rgba(209, 44, 44, 0.748);
+    margin-bottom: 1%;
+    display: block;
+}
+.direct-to-home-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 10vw;
+}
+.decentralised-checkout-tips{
+    height: 20vh;
+    width: 94%;
+    align-items: center;
+    display: flex;
+    color: pink;
+}
+.decentralised-checkout-tips button{
+    height: 10vh;
+    width: 15vw;
+    border: none;
+    font-size: 1.1em;
+    background-color: transparent;
+    color: rgba(75, 75, 206, 0.81);
+    cursor: pointer;
+}

@@ -20,6 +20,12 @@ const Homepage = () => {
                     <i className="ri-play-fill"></i>
                 </button>
             </Link>
+            <Link to={'/decentralisedIdentifiers'}>
+                <button>
+                    <p>Decentralised Identifiers</p>
+                    <i className="ri-play-fill"></i>
+                </button>
+            </Link>
         </div>
     </div>
   )

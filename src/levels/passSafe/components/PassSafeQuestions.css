@@ -1,10 +1,10 @@
 .pass-safe-question-container-question{
     font-size: 1.2em;
     font-weight: 500;
-    margin-top: 18%;
+    margin-top: 13%;
 }
 .pass-safe-question-container-options {
-    height: 20vh;
+    height: 25vh;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -19,7 +19,7 @@
     justify-content: center;
     align-items: center;
     padding: 2%;
-    height: 40%;
+    height: 45%;
     text-align: center;
     border-radius: 20px;
     width: 40%;
