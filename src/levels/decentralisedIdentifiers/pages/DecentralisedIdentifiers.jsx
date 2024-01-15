@@ -2,22 +2,31 @@ import React, { useState,useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { CHECK_DECENTRALISED_ANSWER , RESET_LEVEL} from '../../../redux/slice/DecentralisedIdentifierSlice';
 import './DecentralisedIdentifiers.css';
-import { Link } from 'react-router-dom';
+import { Link, useAsyncError } from 'react-router-dom';
+import LoadingScreen from '../../../Loading/LoadingScreen';
 
 const DecentralisedIdentifiers = () => {
   const dispatch = useDispatch();
   const [isAttempted, setIsAttempted] = useState(false);
   const [decentralisedAnswer, setDecentralisedAnswer] = useState('');
+  const [isLoading,setIsLoading] = useState(true);
   const DecentralisedtData = useSelector((state) => state.DecentralisedIdentifier);
   const isCorrect = useSelector((state)=>state.DecentralisedIdentifier.isAnswerCorrect);
   const onDecentralisedChangeHandler = (event) => {
     setDecentralisedAnswer(event.target.value);
   };
 
+  useEffect(()=>{
+    setTimeout(() => {
+        setIsLoading(false);
+    }, 2000);
+  },[])
+
   const onDecentralisedLevelHandler = async () => {
     setIsAttempted(decentralisedAnswer !== '');
     dispatch(CHECK_DECENTRALISED_ANSWER(decentralisedAnswer));
   };
+
 
   const onDecentralisedContinueHandler = () =>{
     dispatch(RESET_LEVEL());
@@ -78,7 +87,11 @@ const DecentralisedIdentifiers = () => {
         document.body.removeChild(DownLoadLink);
       };
   return (
-    <div className="decentralised-identifier-container">
+    <>{
+        isLoading 
+        ? (<LoadingScreen/>) 
+        : (
+            <div className="decentralised-identifier-container">
       <div className="decentralised-identifier-border">
         <div className="decentralised-identifier-title">
           <p>Decentralised Identifier</p>
@@ -137,6 +150,8 @@ const DecentralisedIdentifiers = () => {
         )}
       </div>
     </div>
+        )
+    }</>
   );
 };
 
