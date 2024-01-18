@@ -1,0 +1,15 @@
+.expert-dialogue-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    width: 37vw;
+    border: 1px solid black;
+    background-color: #ffffff74;
+    border-radius: 20px;
+    position: relative;
+    left: 44%;
+    color: rgba(0, 0, 0, 0.51);
+    padding: 2%;
+    text-align: center;
+}

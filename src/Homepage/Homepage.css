@@ -45,6 +45,7 @@
     border : none;
     border-radius: 20px;
     transition: all ease .5s;
+    cursor: pointer;
     text-decoration: none;
 }
 .home-page-container-levels button:hover{

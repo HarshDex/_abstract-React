@@ -2,7 +2,7 @@ import React, { useState,useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { CHECK_DECENTRALISED_ANSWER , RESET_LEVEL} from '../../../redux/slice/DecentralisedIdentifierSlice';
 import './DecentralisedIdentifiers.css';
-import { Link, useAsyncError } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import LoadingScreen from '../../../Loading/LoadingScreen';
 
 const DecentralisedIdentifiers = () => {

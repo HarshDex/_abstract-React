@@ -1,0 +1,58 @@
+.call-dialogue-container{
+    /* display: flex; */
+    height: fit-content;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.751);
+}
+.call-dialogue-caller{
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+.call-dialogue-caller span{
+    font-weight: 500;
+    color: rgba(225, 45, 45, 0.825);
+}
+.call-dialogue-options{
+    margin-top: 5vh;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    width: 40vw;
+    gap: 10%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.call-dialogue-options button { /* Correct class name here */
+    padding: .5em;
+    width: 80%;
+    border-radius: 20px;
+    border: none;
+    font-size: 1.2vw;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.277);
+    border: 1px solid rgba(0, 0, 0, 0.144);
+    color: rgba(255, 255, 255, 0.588);
+    transition: all ease .5s;
+    cursor: pointer;
+  }
+  .call-next-button{
+    position: relative;
+    top: 15%;
+    left: 34%;
+    height: 8vh;
+    width: 13vw;
+    font-size: 1em;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.332);
+    background-color: rgba(255, 255, 255, 0.436);
+    color: rgba(255, 255, 0, 0.49);
+    cursor: pointer;;
+
+  }
+  .call-dialogue-options button:hover{
+    background-color: rgba(138, 184, 245, 0.436);
+    color: rgb(8, 8, 8);
+    font-weight: 600;
+  }

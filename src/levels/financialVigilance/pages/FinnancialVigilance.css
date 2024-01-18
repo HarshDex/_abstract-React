@@ -1,0 +1,36 @@
+.financial-vigilance-container{
+    display: flex;
+    min-height: 100vh;
+    width: 100vw;
+    background-image: url('https://e0.pxfuel.com/wallpapers/401/971/desktop-wallpaper-blackboard-background-best-blackboard-background-and-on-chat-school-blackboard.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.financial-vigilance-assets{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 40vw;
+    position: relative;
+    top: 10em;
+    left: -5em;
+}
+.financial-vigilance-image{
+    height: 60vh;
+    width: 35vw;
+}
+.financial-vigilance-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.financial-vigilance-dialogue-box{
+    flex-direction: column;
+    height: 100vh;
+    width: 40vw;
+    margin-left: 13vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

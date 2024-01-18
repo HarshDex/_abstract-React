@@ -26,6 +26,12 @@ const Homepage = () => {
                     <i className="ri-play-fill"></i>
                 </button>
             </Link>
+            <Link to={'/financialVigilance'}>
+                <button>
+                    <p>Financial Vigilance</p>
+                    <i className="ri-play-fill"></i>
+                </button>
+            </Link>
         </div>
     </div>
   )
