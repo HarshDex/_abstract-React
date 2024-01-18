@@ -32,6 +32,12 @@ const Homepage = () => {
                     <i className="ri-play-fill"></i>
                 </button>
             </Link>
+            <Link to={'/fishGuardian'}>
+                <button>
+                    <p>Fish Guardian</p>
+                    <i className="ri-play-fill"></i>
+                </button>
+            </Link>
         </div>
     </div>
   )

@@ -18,7 +18,6 @@
     font-weight: 600;
   }
   
-
   
   .data-breach-operations {
     height: 100%;
@@ -65,4 +64,6 @@
   .correct-answer {
     color: #2ecc71; /* Green color for correct answers */
   }
-  
+  .incorrect-answer{
+    color: rgba(255, 0, 0, 0.703);
+  }

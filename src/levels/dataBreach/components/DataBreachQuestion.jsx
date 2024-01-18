@@ -1,25 +1,28 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setCurrentIndex,setIsAnswered} from '../../../redux/slice/DataBreachSlice';
-import './DataBreachQuestion.css'
+import { setCurrentIndex, setIsAnswered } from '../../../redux/slice/DataBreachSlice';
+import './DataBreachQuestion.css';
+import { Link } from 'react-router-dom';
+
 const DataBreachQuestion = ({ question, answer }) => {
   const [inputAnswer, setInputAnswer] = useState('');
   const [isCorrect, setIsCorrect] = useState(false);
-  const dispatch = useDispatch();
   const [clickSubmit, setClickSubmit] = useState(false);
-  const currentIndex = useSelector((state) => state.DataBreach.currentIndex);
 
+  const dispatch = useDispatch();
+  const currentIndex = useSelector((state) => state.DataBreach.currentIndex);
+  const totalData = useSelector((state) => state.DataBreach.questions.length);
+  const isAnswered = useSelector((state) => state.DataBreach.questions[state.DataBreach.currentIndex].isAnswered);
+  useEffect(()=>{
+    console.log(`for current index :${currentIndex}`  + isAnswered);
+  },[currentIndex])
   const onDataInputChangeHandler = (event) => {
     setInputAnswer(event.target.value);
   };
-
   const onDataBreachSubmit = () => {
     setClickSubmit(true);
-    if (inputAnswer.toLowerCase() === answer.toLowerCase()) {
-      setIsCorrect(true);
-    } else {
-      setIsCorrect(false);
-    }
+    setIsCorrect(inputAnswer.toLowerCase() === answer.toLowerCase());
+    dispatch(setIsAnswered(true));
   };
 
   const onNextButtonClick = () => {
@@ -31,17 +34,17 @@ const DataBreachQuestion = ({ question, answer }) => {
   const downloadPdf = () => {
     // Your PDF download logic here
     const pdfPath = '/DataBreachPdfDownload.pdf';
-    const DownLoadLink = document.createElement('a');
-    DownLoadLink.href = pdfPath;
-    DownLoadLink.download = 'DataBreachPdfDownload.pdf';
-    document.body.appendChild(DownLoadLink);
-    DownLoadLink.click();
-    document.body.removeChild(DownLoadLink);
+    const downloadLink = document.createElement('a');
+    downloadLink.href = pdfPath;
+    downloadLink.download = 'DataBreachPdfDownload.pdf';
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
   };
 
   return (
     <div className="dataBreachQuestionContainer">
-      <div className={`data-breach-question ${isCorrect ? 'correct-answer' : 'incorrect-answer'}`}>
+      <div className={`data-breach-question ${isCorrect ? 'correct-answer' : isAnswered ? 'incorrect-answer' : ''}`}>
         {question}
       </div>
       <div className="data-breach-operations">
@@ -60,7 +63,13 @@ const DataBreachQuestion = ({ question, answer }) => {
             <button onClick={onDataBreachSubmit}>Submit</button>
           )}
           {isCorrect ? (
-            <button onClick={onNextButtonClick}>Next Question</button>
+            currentIndex === totalData - 1 ? (
+              <Link to="/">
+                <button className="data-breach-goTo-next">Continue</button>
+              </Link>
+            ) : (
+              <button onClick={onNextButtonClick}>Next Question</button>
+            )
           ) : (
             <></>
           )}

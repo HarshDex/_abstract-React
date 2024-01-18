@@ -38,6 +38,7 @@ body {
     height: 80%;
     width: 95%;
     object-fit: cover; /* Use cover for a more professional look */
+    border: 1px solid rgba(245, 245, 245, 0.612);
   }
   .data-breach-questions{
     height: 50vh;
@@ -45,4 +46,9 @@ body {
     text-align: center;
     padding : 0% 10%;
   }
- 
+ .data-breach-goTo-next{
+  height: 8vh;
+  width: 12vw;
+  border : 1px solid black;
+  border-radius: 10px;
+ }
