@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const bankCallScenario = [
   {
     "id": 1,
-    "dialogue": "Hello, this is [unknown bank] calling to offer you an exclusive promotion on our new banking services.",
+    "dialogue": "Hello, this is ABSTRACT BANK calling to offer you an exclusive promotion on our new banking services.",
     "options": [
       { 
         text: "Hang up immediately", 
@@ -13,7 +13,7 @@ const bankCallScenario = [
          reason: "Requesting more details helps you assess the legitimacy of the call without providing personal information. But it is not wise to choose this option right now" 
       },
       { 
-        text: "Provide personal information to avail the promotion", 
+        text: "Provide personal information to avail the promotion",
         reason: "You are Wrong! Avoid providing personal information over the phone, especially to unknown callers, to protect yourself from potential scams." 
       }
     ],
@@ -62,7 +62,7 @@ const bankCallScenario = [
   },
   {
     "id": 4,
-    "dialogue": "This is [real bank] calling to confirm a recent transaction on your account. Did you make a purchase of $500 at [legitimate store]?",
+    "dialogue": "This is ABSTRACT BANK calling to confirm a recent transaction on your account. Did you make a purchase of $500 at [legitimate store]?",
     "options": [
       { 
         text: "Confirm the transaction",
@@ -101,7 +101,7 @@ const bankCallScenario = [
   },
   {
     "id": 6,
-    "dialogue": "This is [real bank] calling to verify a recent login to your online banking. Can you confirm the last transaction you made?",
+    "dialogue": "This is ABSTRACT BANK calling to verify a recent login to your online banking. Can you confirm the last transaction you made?",
     "options": [
       { text: "Confirm the last transaction details", reason: " Correct! Confirming the last transaction details over the phone is a legitimate and secure way to verify the authenticity of the call." },
       { text: "Ask for a call-back number to verify legitimacy", reason: "Requesting a call-back number allows you to independently verify the legitimacy of the call without disclosing information immediately. But it is not wise to choose this option right now" },
@@ -171,7 +171,7 @@ const bankCallScenario = [
   },
   {
     "id": 11,
-    "dialogue": "This is [real bank] calling to inform you about a recent security update. Can you confirm your mailing address for verification?",
+    "dialogue": "This is ABSTRACT BANK calling to inform you about a recent security update. Can you confirm your mailing address for verification?",
     "options": [
       { text: "Confirm the mailing address", reason: "Correct! You can probably do this , Verifying your mailing address by calling the bank using a known and official number is a secure way to handle this situation. The caller's identity is unknown." },
       { text: "Provide additional personal information", reason: "Avoid providing additional personal information over the phone, especially when the call is unexpected and unverified." },

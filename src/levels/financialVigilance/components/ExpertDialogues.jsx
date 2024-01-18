@@ -18,7 +18,6 @@ const ExpertDialogues = () => {
   const currentIndex = useSelector((state) => state.Financial.currentIndex);
   const bankScenarioData = useSelector((state) => state.Financial.bankCallScenarioData);
   const totalData = bankScenarioData.length;
-
   const isIndexValid = currentIndex >= 0 && currentIndex < totalData;
   const reasons = isIndexValid ? bankScenarioData[currentIndex].options : null;
   const dispatch = useDispatch();
