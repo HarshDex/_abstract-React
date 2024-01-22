@@ -7,18 +7,21 @@ import DecentralisedIdentifiers from './levels/decentralisedIdentifiers/pages/De
 import FinancialVigilance from './levels/financialVigilance/pages/FinancialVigilance';
 import FishGuardian from './levels/FishGuardian/pages/FishGuardian';
 import UtopianPrivacy from './levels/UtopianPrivacy/pages/UtopianPrivacy';
+import LocomotiveScrollContainer from  './locomotiveScroll/LocomotiveScrollContainer'
 const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Homepage/>} />
-      <Route path="passSafe" element={<PassSafe/>} />
-      <Route path="dataBreach" element={<DataBreach/>} />
-      <Route path='decentralisedIdentifiers' element = {<DecentralisedIdentifiers/>}/>
-      <Route path='financialVigilance' element = {<FinancialVigilance/>}/>
-      <Route path='fishGuardian' element={<FishGuardian/>}/>
-      <Route path='utopianPrivacy' element={<UtopianPrivacy/>}/>
-      <Route path="*" element={<>nowhere to go</>} />
-    </Routes>
+    <LocomotiveScrollContainer>
+      <Routes>
+        <Route path="/" element={<Homepage/>} />
+        <Route path="passSafe" element={<PassSafe/>} />
+        <Route path="dataBreach" element={<DataBreach/>} />
+        <Route path='decentralisedIdentifiers' element = {<DecentralisedIdentifiers/>}/>
+        <Route path='financialVigilance' element = {<FinancialVigilance/>}/>
+        <Route path='fishGuardian' element={<FishGuardian/>}/>
+        <Route path='utopianPrivacy' element={<UtopianPrivacy/>}/>
+        <Route path="*" element={<>nowhere to go</>} />
+      </Routes>
+    </LocomotiveScrollContainer>
   );
 };
 
