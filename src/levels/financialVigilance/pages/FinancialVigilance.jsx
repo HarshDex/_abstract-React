@@ -1,5 +1,4 @@
 // FinancialVigilance.js
-
 import React, { useRef, useEffect, useState } from 'react';
 import './FinnancialVigilance.css';
 import CyberSecurityExpert from '../../../assets/CyberSecurityExpert.png';

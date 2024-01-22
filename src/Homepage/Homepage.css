@@ -52,3 +52,18 @@
     background-color: rgba(195, 186, 186, 0.132);
     color: rgb(1, 1, 31);
 }
+.scroll-down {
+    position: fixed;
+    bottom: 20px;
+    z-index: 99;
+    font-size: 3em;
+    color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .scroll-down:hover {
+    transform: translateX(-50%) translateY(10px); /* Adjust translateY value based on your preference */
+  }

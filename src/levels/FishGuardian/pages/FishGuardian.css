@@ -1,0 +1,19 @@
+.fish-guardian{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(2, 109, 151, 0.203);
+    height: 100vh;
+    width: 100vw;
+}
+.fish-guardian-laptop{
+    position: fixed;
+    height: 600px;
+    width: 700px;
+}
+.fish-guardian-laptop img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+

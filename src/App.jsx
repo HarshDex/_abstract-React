@@ -6,6 +6,7 @@ import DataBreach from './levels/dataBreach/Pages/DataBreach';
 import DecentralisedIdentifiers from './levels/decentralisedIdentifiers/pages/DecentralisedIdentifiers';
 import FinancialVigilance from './levels/financialVigilance/pages/FinancialVigilance';
 import FishGuardian from './levels/FishGuardian/pages/FishGuardian';
+import UtopianPrivacy from './levels/UtopianPrivacy/pages/UtopianPrivacy';
 const App = () => {
   return (
     <Routes>
@@ -15,6 +16,7 @@ const App = () => {
       <Route path='decentralisedIdentifiers' element = {<DecentralisedIdentifiers/>}/>
       <Route path='financialVigilance' element = {<FinancialVigilance/>}/>
       <Route path='fishGuardian' element={<FishGuardian/>}/>
+      <Route path='utopianPrivacy' element={<UtopianPrivacy/>}/>
       <Route path="*" element={<>nowhere to go</>} />
     </Routes>
   );

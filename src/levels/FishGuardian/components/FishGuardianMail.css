@@ -1,0 +1,21 @@
+.fish-guardian-mail-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+.fish-guardian-mail{
+    height: 350px;
+    width: 520px;
+    margin-bottom: 10px;
+    background-image: url('../../../assets//2akfljaf.jpg');
+    background-size: cover;
+}
+.fish-guardian-mail-text{
+    margin-top: 18%;
+    height: 65%;
+    width: 70%;
+    margin-left: 20%;
+    border: 1px solid black;
+}

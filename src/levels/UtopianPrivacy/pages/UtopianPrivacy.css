@@ -1,0 +1,103 @@
+.utopian-privacy-container{
+    min-height: 100vh;
+    width: 100vw;
+    padding: 1em;
+    background-color: rgb(2, 2, 19);
+}
+.utopian-privacy-container-heading{
+    font-size: 4vw;
+    font-weight: 600;
+    color: rgba(239, 236, 236, 0.886);
+    margin-bottom: .3em;
+}
+.utopian-privacy-data{
+    padding: 1em;
+    min-height: 100vh;
+    width: 100%;
+    border: 1px solid rgba(248, 248, 248, 0.33);
+    border-radius: 20px;
+}
+.utopian-privacy-data-image{
+    height: 80vh;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.utopian-privacy-data-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.utopian-privacy-question{
+    font-size: 1.1em;
+    margin-top: 3%;
+    color: rgba(255, 255, 255, 0.893);
+}
+.utopian-privacy-question-para{
+    margin-bottom: .8em;
+}
+.utopian-privacy-question-para:nth-child(3){
+    /* font-size: 1.2em; */
+    color: rgba(242, 231, 115, 0.61);
+}
+.utopian-privacy-evidence{
+    font-size: 1.1em;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: rgb(115, 151, 242);
+}
+.utopian-privacy-question-operation {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    border-radius: 10px;
+}
+.utopian-privacy-question-operation input{
+    height: 60%;
+    width: 50%;
+    border-radius: 10px;
+    border : 1px solid rgba(255, 255, 255, 0.645);
+    padding : 1.5%;
+    outline: none;
+    background-color: transparent;
+    color: white;
+}
+.utopian-privacy-question-operation button{
+    padding: .7% 3%;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.722);   
+    cursor: pointer;
+    transition: all ease .5s;
+}
+.utopian-privacy-question-operation button:hover{
+    background-color: rgba(65, 147, 206, 0.286);
+    color: white;
+}
+.utopian-privacy-result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+    height: 30vh;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.721);
+    border-radius: 10px;
+}
+.utopian-privacy-correct{
+    color: green;
+    border-color: green;
+}
+.utopian-privacy-false{
+    color: red;
+    border-color: red;
+}
+.utopian-privacy-continue-button{
+    padding: .7% 3%;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.722);   
+    cursor: pointer;
+    transition: all ease .5s;
+}
