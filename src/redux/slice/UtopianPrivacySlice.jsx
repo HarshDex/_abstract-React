@@ -25,7 +25,7 @@ export const UtopianPrivacySlice = createSlice({
       },
       ON_CLOSE: (state) => {
           state.isAttempted = false;
-          state.isCorrect = false; // Add this line to reset isCorrect
+          state.isCorrect = false;
       },
     },
   });  
