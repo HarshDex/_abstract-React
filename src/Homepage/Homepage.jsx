@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Homepage.css';
-
 const Homepage = () => {
   const [scrollInterval, setScrollInterval] = useState(null);
-
   const handleScrollDown = () => {
     setScrollInterval(
       setInterval(() => {
         window.scrollBy({
-          top: 2, // Adjust the scroll speed as needed
+          top: 2,
           behavior: 'smooth',
         });
-      }, 16) // Adjust the interval to control the smoothness of scrolling
+      }, 16)
     );
   };
 
@@ -63,6 +61,12 @@ const Homepage = () => {
           <Link to={'/utopianPrivacy'}>
             <button>
               <p>Utopian Privacy Challenge</p>
+              <i className="ri-play-fill"></i>
+            </button>
+          </Link>
+          <Link to={'/secretVault'}>
+            <button>
+              <p>Secret Vault</p>
               <i className="ri-play-fill"></i>
             </button>
           </Link>

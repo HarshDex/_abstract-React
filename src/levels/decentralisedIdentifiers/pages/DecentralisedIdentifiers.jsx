@@ -77,7 +77,6 @@ const DecentralisedIdentifiers = () => {
         }
     };
     const downloadVerifiablePdf = () => {
-        // Your PDF download logic here
         const pdfPath = '/VerifiableCredential.pdf';
         const DownLoadLink = document.createElement('a');
         DownLoadLink.href = pdfPath;
@@ -85,7 +84,7 @@ const DecentralisedIdentifiers = () => {
         document.body.appendChild(DownLoadLink);
         DownLoadLink.click();
         document.body.removeChild(DownLoadLink);
-      };
+     };
   return (
     <>{
         isLoading 

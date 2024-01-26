@@ -5,6 +5,7 @@ import {DecentralisedIdentifierSlice} from "./slice/DecentralisedIdentifierSlice
 import {FinancialVigilanceSlice} from "./slice/FinancialVigilanceSlice"; 
 import {FishGuardianSlice} from "./slice/FishGuardianSlice";
 import {UtopianPrivacySlice} from "./slice/UtopianPrivacySlice";
+import {SecretVaultSlice} from "./slice/SecretVaultSlice";
 export const store = configureStore({
     reducer : {
         Password : PasswordSlice.reducer,
@@ -13,5 +14,6 @@ export const store = configureStore({
         Financial : FinancialVigilanceSlice.reducer,
         FishGuardian : FishGuardianSlice.reducer,
         UtopianPrivacy : UtopianPrivacySlice.reducer,
+        Secret : SecretVaultSlice.reducer
     }
 })
