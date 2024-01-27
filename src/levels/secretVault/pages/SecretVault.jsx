@@ -12,7 +12,7 @@ const SecretVault = () => {
   const [answer, setAnswer] = useState('');
   const [isAttempted, setIsAttempted] = useState(false);
   const isCorrect = useSelector((state) => state.Secret.isCorrect);
-  const [loading,setLoading] = useState(false);
+  const [loading,setLoading] = useState(true);
   const dispatch = useDispatch();
 
   useEffect(() => {
