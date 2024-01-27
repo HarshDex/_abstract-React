@@ -8,7 +8,7 @@ import FinancialVigilance from './levels/financialVigilance/pages/FinancialVigil
 import FishGuardian from './levels/FishGuardian/pages/FishGuardian';
 import UtopianPrivacy from './levels/UtopianPrivacy/pages/UtopianPrivacy';
 import SecretVault from './levels/secretVault/pages/SecretVault';
-import SecretFlow from './levels/secretVault/pages/SecretFlow';
+import SecretFlow from './levels/secretVault/components/SecretFlow';
 const App = () => {
   return (
     <Routes>

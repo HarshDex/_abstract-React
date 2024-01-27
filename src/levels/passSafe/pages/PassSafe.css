@@ -45,6 +45,7 @@
     border-radius: 10px;
     background-color: transparent;
     border : 1px solid black;
+    cursor: pointer;
     transition: all ease .5s;
   }
 

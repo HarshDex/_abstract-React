@@ -25,6 +25,7 @@
     width: 40%;
     border : 1px solid black;
     transition: all ease .5s;
+    cursor: pointer;
   }
   
   .pass-safe-question-container-options button:hover{

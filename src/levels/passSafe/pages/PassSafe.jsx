@@ -46,14 +46,13 @@ const PassSafe = () => {
   };
 
   const goToNextPage = () => {
-    // Implement logic to navigate to the next page
     console.log('Navigate to next page');
   };
 
   return(
     <>
       {passSafeLoading ? (
-        <LoadingScreen/>
+        <LoadingScreen dataline={''}/>
       ) : (
         <div className="pass-safe-container">
           <div className="pass-safe-container-hashed-password">

@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import './LoadingScreen.css'; // Import the CSS file for styling
 
-const LoadingScreen = () => {
+const LoadingScreen = ({dataline}) => {
   const [loadingProgress, setLoadingProgress] = useState(0);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const LoadingScreen = () => {
 
   return (
     <div className="loading-screen">
-      <p>Loading Hold tight!!...</p>
+      <p>Loading Hold tight!!...{dataline}</p>
       <div className="loading-bar-container">
         <div className="loading-bar" style={{ width: `${loadingProgress}%` }}></div>
       </div>
