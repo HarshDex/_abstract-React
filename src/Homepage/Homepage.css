@@ -7,6 +7,23 @@
     width: 100vw;
     overflow: scroll;
 }
+.fullScreenButton{
+    font-size: 2.5em;
+    border : none;
+    border-radius: 80%;
+    width: 1.5em;
+    position: fixed;
+    z-index: 99;
+    color: white;
+    top : 85%;
+    background-color: transparent;
+    right: 2%;
+    transition: all ease .4s;
+}
+.fullScreenButton:hover{
+    background-color: rgba(255, 255, 255, 0.507);
+    color: black;
+}
 
 .home-page-container-heading{
     position: relative;

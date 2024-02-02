@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './Homepage.css';
 const Homepage = () => {
@@ -18,9 +18,43 @@ const Homepage = () => {
     clearInterval(scrollInterval);
   };
 
+  const fullscreenRef = useRef();
+  const [isFullscreen, setIsFullscreen] = useState(false);
+
+  const toggleFullscreen = () => {
+    const element = fullscreenRef.current;
+
+    if (!isFullscreen) {
+      if (element.requestFullscreen) {
+        element.requestFullscreen();
+      } else if (element.mozRequestFullScreen) {
+        element.mozRequestFullScreen();
+      } else if (element.webkitRequestFullscreen) {
+        element.webkitRequestFullscreen();
+      } else if (element.msRequestFullscreen) {
+        element.msRequestFullscreen();
+      }
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
+      }
+    }
+
+    setIsFullscreen(!isFullscreen);
+  };
+
   return (
     <>
-      <div className="home-page-container">
+      <div className="home-page-container" ref={fullscreenRef}>
+        <button className = 'fullScreenButton' onClick={toggleFullscreen}>
+          {isFullscreen ? (<i class="ri-contract-left-right-line"></i>) : (<i class="ri-expand-left-right-line"></i>)}
+        </button>
         <div className="scroll-down" onMouseEnter={handleScrollDown} onMouseLeave={handleStopScroll}>
           <i className="ri-arrow-down-double-line"></i>
         </div>

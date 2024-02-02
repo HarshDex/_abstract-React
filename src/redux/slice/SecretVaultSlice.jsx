@@ -8,6 +8,7 @@ export const SecretVaultSlice = createSlice({
     name : 'Secret',
     initialState : {
         isCorrect : false,
+        isAttempt : false,
         secretVaultDataStory : secretVaultData.story,
         secretVaultDataQuestion : secretVaultData.question,
         secretVaultDataAnswer : secretVaultData.answer
@@ -16,8 +17,15 @@ export const SecretVaultSlice = createSlice({
         IS_ANSWER_CORRECT_SECRET : (state,action) => {
             const userAnswer = String(action.payload);
             state.isCorrect = state.secretVaultDataAnswer.toLowerCase() === userAnswer.toLowerCase();
+        },
+        SET_IS_ATTEMPTED : (state,action) =>{
+            state.isAttempt = action.payload;
+        },
+        RESET_LEVEL : (state) => {
+            state.isCorrect = false;
+            state.isAttempt = false;
         }
     }
 })
-export const {IS_ANSWER_CORRECT_SECRET} = SecretVaultSlice.actions
+export const {IS_ANSWER_CORRECT_SECRET,RESET_LEVEL,SET_IS_ATTEMPTED} = SecretVaultSlice.actions
 export default SecretVaultSlice.reducer

@@ -1,10 +1,8 @@
 // LoadingScreen.jsx
 import React, { useState, useEffect } from 'react';
-import './LoadingScreen.css'; // Import the CSS file for styling
-
+import './LoadingScreen.css'; 
 const LoadingScreen = ({dataline}) => {
   const [loadingProgress, setLoadingProgress] = useState(0);
-
   useEffect(() => {
     const interval = setInterval(() => {
       setLoadingProgress((prevProgress) => {
@@ -14,8 +12,7 @@ const LoadingScreen = ({dataline}) => {
         clearInterval(interval);
         return 100;
       });
-    }, 20); // Adjust the interval based on your loading time
-
+    }, 20);
     return () => clearInterval(interval);
   }, []);
 
@@ -26,7 +23,7 @@ const LoadingScreen = ({dataline}) => {
         <div className="loading-bar" style={{ width: `${loadingProgress}%` }}></div>
       </div>
     </div>
-  );
+  );``
 };
 
 export default LoadingScreen;

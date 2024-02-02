@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { IS_ANSWER_CORRECT_SECRET } from '../../../redux/slice/SecretVaultSlice';
+import { IS_ANSWER_CORRECT_SECRET , RESET_LEVEL, SET_IS_ATTEMPTED} from '../../../redux/slice/SecretVaultSlice';
 import LoadingScreen from '../../../Loading/LoadingScreen'
 import './SecretVault.css';
 const SecretVault = () => {
@@ -10,10 +10,10 @@ const SecretVault = () => {
   const [storyScreen, setStoryScreen] = useState(true);
   const [buttonFlag, setButtonFlag] = useState(false);
   const [answer, setAnswer] = useState('');
-  const [isAttempted, setIsAttempted] = useState(false);
   const isCorrect = useSelector((state) => state.Secret.isCorrect);
   const [loading,setLoading] = useState(true);
   const dispatch = useDispatch();
+  const isAttempted = useSelector((state)=>state.Secret.isAttempt);
 
   useEffect(() => {
     const timerId = setTimeout(() => {
@@ -34,7 +34,7 @@ const SecretVault = () => {
   const checkAnswer = () => {
     console.log("Checking answer:", answer);
     dispatch(IS_ANSWER_CORRECT_SECRET(answer));
-    setIsAttempted(true);
+    dispatch(SET_IS_ATTEMPTED(true));
   };
 
   const onAnswerChange = (event) => {
@@ -42,8 +42,8 @@ const SecretVault = () => {
   };
 
   const onHomePage = () => {
-    setIsAttempted(false);
-    dispatch(IS_ANSWER_CORRECT_SECRET(false));
+    dispatch(SET_IS_ATTEMPTED(false));
+    dispatch(RESET_LEVEL());
     setAnswer('');
   }
 
