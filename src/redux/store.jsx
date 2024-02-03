@@ -7,6 +7,7 @@ import {FishGuardianSlice} from "./slice/FishGuardianSlice";
 import {UtopianPrivacySlice} from "./slice/UtopianPrivacySlice";
 import {SecretVaultSlice} from "./slice/SecretVaultSlice";
 import {CryptalogueSlice} from "./slice/CryptalogueSlice";
+import {QuantumIntrusionSlice} from './slice/QuantumIntrusionSlice'
 export const store = configureStore({
     reducer : {
         Password : PasswordSlice.reducer,
@@ -16,6 +17,7 @@ export const store = configureStore({
         FishGuardian : FishGuardianSlice.reducer,
         UtopianPrivacy : UtopianPrivacySlice.reducer,
         Secret : SecretVaultSlice.reducer,
-        Cryptalogues : CryptalogueSlice.reducer
+        Cryptalogues : CryptalogueSlice.reducer,
+        Quantum : QuantumIntrusionSlice.reducer,
     }
 })

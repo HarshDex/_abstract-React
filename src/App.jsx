@@ -12,6 +12,7 @@ import SecretFlow from './levels/secretVault/components/SecretFlow';
 import './App.css'
 import Crytpalogue from './levels/cryptalogue/pages/Crytpalogue';
 import CryptalogueTips from './levels/cryptalogue/pages/CryptalogueTips';
+import QuantumIntrusion from './levels/quantumIntrusion/pages/QuantumIntrusion';
 
 const App = () => {
   return (
@@ -27,7 +28,7 @@ const App = () => {
       <Route path='secretVault/flow-of-online-services' element={<SecretFlow />} />
       <Route path='cryptalogue' element = {<Crytpalogue/>}/>
       <Route path='cryptalogue/cryptalogue-tips-and-tricks' element = {<CryptalogueTips/>}/>
-
+      <Route path='quantumIntrusion' element = {<QuantumIntrusion/>}/>
       <Route path="*" element={<>nowhere to go</>} />
     </Routes>
   );

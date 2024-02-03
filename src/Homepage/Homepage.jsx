@@ -110,6 +110,12 @@ const Homepage = () => {
               <i className="ri-play-fill"></i>
             </button>
           </Link>
+          <Link to={'/quantumIntrusion'}>
+            <button>
+              <p>Quantum Intrusion</p>
+              <i className="ri-play-fill"></i>
+            </button>
+          </Link>
         </div>
       </div>
     </>
