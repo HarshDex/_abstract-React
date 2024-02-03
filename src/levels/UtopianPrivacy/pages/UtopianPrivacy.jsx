@@ -86,7 +86,8 @@ const UtopianPrivacy = () => {
                 />
                 {isFinish ? (
                   <Link to={'/'}>
-                    <button onClick={onUtopianNextButton}>Continue</button>
+                    <button className = 'utopian-privacy-continue-button'
+                    onClick={onUtopianNextButton}>Continue</button>
                   </Link>
                 ) : (
                   <button onClick={onUtopianButtonClick} disabled={isDisable}>

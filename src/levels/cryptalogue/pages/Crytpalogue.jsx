@@ -24,6 +24,9 @@ const Crytpalogue = () => {
     dispatch(SET_IS_ATTEMPTED(true));
     dispatch(IS_CORRECT(ans));
   }
+  const handleKeyPress = (event) =>{
+    if(event.key === 'Enter') onSubmitHandler();
+  }
   const onContinueHandler = () =>{
     dispatch(RESET_LEVEL());
   }
@@ -57,7 +60,11 @@ const Crytpalogue = () => {
                         </p>
                     </div>
                     <div className="cryptalogue-container-operations">
-                        <input type="text" className='CryptalogueAnswerField' onChange={onCryptalogueChangeHandler} value={ans} placeholder='enter your answer'/>
+                        <input type="text" className='CryptalogueAnswerField' 
+                        onChange={onCryptalogueChangeHandler} 
+                        value={ans} 
+                        onKeyDown={handleKeyPress}
+                        placeholder='enter your answer'/>
                         <div className="cryptalogue-operation-buttons" >
                             <button onClick={onSubmitHandler}>Submit</button>
                             {

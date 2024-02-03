@@ -66,3 +66,6 @@ const CryptalogueTips = () => {
 }
 
 export default CryptalogueTips
+
+//! to be done immediately
+//? add the enter button functinality
