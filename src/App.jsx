@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Homepage from './Homepage/Homepage';
 import PassSafe from './levels/passSafe/pages/PassSafe';
@@ -13,6 +13,7 @@ import './App.css'
 import Crytpalogue from './levels/cryptalogue/pages/Crytpalogue';
 import CryptalogueTips from './levels/cryptalogue/pages/CryptalogueTips';
 import QuantumIntrusion from './levels/quantumIntrusion/pages/QuantumIntrusion';
+import QuantumIntrusionTipsAndTricks from './levels/quantumIntrusion/componenets/QuantumIntrusionTipsAndTricks';
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
       <Route path='cryptalogue' element = {<Crytpalogue/>}/>
       <Route path='cryptalogue/cryptalogue-tips-and-tricks' element = {<CryptalogueTips/>}/>
       <Route path='quantumIntrusion' element = {<QuantumIntrusion/>}/>
+      <Route path='quantum-intrusion/quantum-intrusion-tips-and-tricks' element = {<QuantumIntrusionTipsAndTricks/>}/>
       <Route path="*" element={<>nowhere to go</>} />
     </Routes>
   );

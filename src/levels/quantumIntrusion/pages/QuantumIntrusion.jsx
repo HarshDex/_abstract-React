@@ -4,8 +4,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { RESET_LEVEL, SET_IS_ATTEMPTED, SET_iS_CORRECT } from '../../../redux/slice/QuantumIntrusionSlice';
 const QuantumIntrusion = () => {
-    const [loading,setLoading] = useState(false);
+    const [loading,setLoading] = useState(true);
     const {para1,para2,para3} = useSelector((state)=>state.Quantum.quantumIntrusionData)
+    const quantumIDCredentials = useSelector((state)=>state.Quantum.quantumIDCredentials);
     const isAttempted = useSelector((state)=>state.Quantum.
     isAttempted);
     const isCorrect = useSelector((state)=>state.Quantum.isCorrect);
@@ -29,44 +30,7 @@ const QuantumIntrusion = () => {
     const onQuantumIntrusionChangeHandler = (event) =>{
         setAns(event.target.value);
     }
-    const quantumIDCredentials = `
-        # Credentials you get from registering a new application
-        client_id = '<the id you get from cybernetics megacorp>'
-        client_secret = '<the secret you get from cybernetics megacorp>'
-        redirect_uri = 'https://your.registered/callback'
-
-        # OAuth endpoints given in the cybernetics megacorp API documentation
-        authorization_base_url = "https://accounts.cybernaticsmegacorp.com/o/oauth2/v2/auth"
-        token_url = "https://www.cybernaticsmegacorpapis.com/oauth2/v4/token"
-        scope = [
-            "openid",
-            "https://www.cybernaticsmegacorpapis.com/auth/userinfo.email",
-        ]
-
-        from requests_oauthlib import OAuth2Session
-        cybernatics_megacorp = OAuth2Session(client_id, scope=scope, redirect_uri=redirect_uri)
-
-        # Redirect user to cybernetics megacorp for authorization
-        authorization_url, state = cybernatics_megacorp.authorization_url(
-            authorization_base_url,
-            # offline for refresh token
-            # force to always make user click authorize
-            access_type="offline", prompt="select_account"
-        )
-        print('Please go here and authorize:', authorization_url)
-
-        # Get the authorization verifier code from the callback url
-        redirect_response = input('Paste the full redirect URL here: ')
-
-        # Fetch the access token
-        cybernatics_megacorp.fetch_token(
-            token_url, client_secret=client_secret, authorization_response=redirect_response
-        )
-
-        # Fetch a protected resource, i.e. user profile
-        r = cybernatics_megacorp.get('https://www.cybernaticsmegacorpapis.com/oauth2/v1/userinfo')
-        print(r.content)
-    `;
+    
     return (
         <>{
             loading
