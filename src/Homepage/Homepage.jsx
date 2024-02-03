@@ -53,7 +53,7 @@ const Homepage = () => {
     <>
       <div className="home-page-container" ref={fullscreenRef}>
         <button className = 'fullScreenButton' onClick={toggleFullscreen}>
-          {isFullscreen ? (<i class="ri-contract-left-right-line"></i>) : (<i class="ri-expand-left-right-line"></i>)}
+          {isFullscreen ? (<i className="ri-contract-left-right-line"></i>) : (<i className="ri-expand-left-right-line"></i>)}
         </button>
         <div className="scroll-down" onMouseEnter={handleScrollDown} onMouseLeave={handleStopScroll}>
           <i className="ri-arrow-down-double-line"></i>
@@ -101,6 +101,12 @@ const Homepage = () => {
           <Link to={'/secretVault'}>
             <button>
               <p>Secret Vault</p>
+              <i className="ri-play-fill"></i>
+            </button>
+          </Link>
+          <Link to={'/cryptalogue'}>
+            <button>
+              <p>Cryptalogue</p>
               <i className="ri-play-fill"></i>
             </button>
           </Link>

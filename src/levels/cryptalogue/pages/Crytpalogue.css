@@ -1,0 +1,98 @@
+.cryptalogue-container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    padding: 2vh;
+    background-color: rgb(3, 3, 27);
+}
+.cryptalogue-container-heading h1{
+    font-size: 3.5em;
+    color: rgba(198, 74, 229, 0.716);
+    text-transform: capitalize;
+}
+.cryptalogue-container-data{
+    min-height: 100vh;
+    width: 100%;
+    padding: 3vh;
+    border: 1px solid rgba(50, 205, 195, 0.685);
+    border-radius: 20px;
+}
+.cryptalogue-container-image{
+    height: 40em;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.cryptalogue-container-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.cryptalogue-container-para{
+    margin: 2vh 0;
+    font-size: 1.2em;
+    color: white;
+}
+.crypta-logue-para1{
+    color: rgba(198, 74, 229, 0.552);
+}
+.crypta-logue-para2{
+    color:  rgba(50, 205, 195, 0.63);
+}
+.cryptalogue-container-operations{
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    gap: 20px;
+}
+.CryptalogueAnswerField{
+    height: 80%;
+    width: 50%;
+    border-radius: 20px;
+    border: 1px solid rgba(198, 74, 229, 0.716);
+    background-color: transparent;
+    outline: none;
+    color: rgba(50, 205, 195, 0.685);
+    padding: 0 2vh;
+    font-size: 1em;
+}
+.cryptalogue-operation-buttons{
+    display: flex;
+    gap: 5vh;
+}
+.cryptalogue-operation-buttons button{
+    height: 8vh;
+    width: 10vw;
+    border-radius: 15px;
+    border: 1px solid rgba(198, 74, 229, 0.716);
+    color: rgba(50, 205, 195, 0.685);
+    background-color: transparent;
+    transition: all ease .4s;
+}
+.cryptalogue-operation-buttons button:hover{
+    color:  rgba(198, 74, 229, 0.716);
+    border : 1px solid rgba(50, 205, 195, 0.685);
+    background-color: rgba(17, 34, 33, 0.395);
+}
+.correct{
+    color: green;
+    text-align: center;
+}
+.wrong{
+    color: rgba(255, 0, 0, 0.575);
+    text-align: center;
+}
+.cryptalogue-container-help{
+    color: rgba(255, 255, 0, 0.597);
+    margin-bottom: 2vh;
+}
+.cryptalogue-container-help-button{
+    border: none;
+    background-color: transparent;
+    font-size: 1em;
+    color:  rgba(234, 0, 255, 0.597);
+}
