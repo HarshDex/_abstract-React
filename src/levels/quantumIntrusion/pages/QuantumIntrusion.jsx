@@ -6,7 +6,7 @@ import { RESET_LEVEL, SET_IS_ATTEMPTED, SET_iS_CORRECT } from '../../../redux/sl
 
 import './QuantumIntrusion.css'
 const QuantumIntrusion = () => {
-    const [loading,setLoading] = useState(false);
+    const [loading,setLoading] = useState(true);
     const {para1,para2,para3} = useSelector((state)=>state.Quantum.quantumIntrusionData)
     const quantumIDCredentials = useSelector((state)=>state.Quantum.quantumIDCredentials);
     const isAttempted = useSelector((state)=>state.Quantum.
