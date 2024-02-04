@@ -116,6 +116,12 @@ const Homepage = () => {
               <i className="ri-play-fill"></i>
             </button>
           </Link>
+          <Link to={'/mysticMatrix'}>
+            <button>
+              <p>Mystic Matrix</p>
+              <i className="ri-play-fill"></i>
+            </button>
+          </Link>
         </div>
       </div>
     </>

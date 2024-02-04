@@ -14,6 +14,7 @@ import Crytpalogue from './levels/cryptalogue/pages/Crytpalogue';
 import CryptalogueTips from './levels/cryptalogue/pages/CryptalogueTips';
 import QuantumIntrusion from './levels/quantumIntrusion/pages/QuantumIntrusion';
 import QuantumIntrusionTipsAndTricks from './levels/quantumIntrusion/componenets/QuantumIntrusionTipsAndTricks';
+import MysticMatrix from './levels/mysticMatrix/pages/MysticMatrix';
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
       <Route path='cryptalogue/cryptalogue-tips-and-tricks' element = {<CryptalogueTips/>}/>
       <Route path='quantumIntrusion' element = {<QuantumIntrusion/>}/>
       <Route path='quantum-intrusion/quantum-intrusion-tips-and-tricks' element = {<QuantumIntrusionTipsAndTricks/>}/>
+      <Route path='mysticMatrix' element={<MysticMatrix/>}/>
       <Route path="*" element={<>nowhere to go</>} />
     </Routes>
   );
