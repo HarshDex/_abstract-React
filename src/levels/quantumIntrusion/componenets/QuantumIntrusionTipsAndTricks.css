@@ -1,0 +1,55 @@
+.quantum-intrusion-tips-and-tricks{
+    min-height: 100vh;
+    width: 100%;
+    padding: 3vh;
+    background-color: rgb(0, 0, 28);
+    color: white;
+
+}
+.tips-heading{
+    font-size: 2em;
+    color: rgb(9, 98, 153);
+}
+.quantum-intrusion-tips-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: fit-content;
+    width: 100%;
+    padding: 3vh;
+    border : 1px solid rgb(118, 118, 6);
+    border-radius: 10px;
+}
+.tips-image{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.tips-image img{
+    height : 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.tips-para3,.tips-para4{
+    color: rgb(140, 140, 19);
+}
+.tips-para5,.tips-para6{
+    color: rgb(140, 140, 19);
+}
+
+.return-button-quantum-intrusion{
+    height: 2.5em;
+    border-radius: 10px;
+    background-color: rgb(31, 149, 222);
+    color: rgb(229, 229, 8);
+    border: none;
+    width: 15em;
+    transition: all ease .5s;
+    align-self: center;
+}
+.return-button-quantum-intrusion:hover{
+    background-color: transparent;
+    border: 1px solid rgba(229, 229, 8, 0.641);
+    color: rgb(31, 149, 222);
+}
