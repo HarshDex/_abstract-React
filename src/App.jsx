@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css'
 import { Routes, Route } from 'react-router-dom';
 import Homepage from './Homepage/Homepage';
 import PassSafe from './levels/passSafe/pages/PassSafe';
@@ -9,12 +10,12 @@ import FishGuardian from './levels/FishGuardian/pages/FishGuardian';
 import UtopianPrivacy from './levels/UtopianPrivacy/pages/UtopianPrivacy';
 import SecretVault from './levels/secretVault/pages/SecretVault';
 import SecretFlow from './levels/secretVault/components/SecretFlow';
-import './App.css'
 import Crytpalogue from './levels/cryptalogue/pages/Crytpalogue';
 import CryptalogueTips from './levels/cryptalogue/pages/CryptalogueTips';
 import QuantumIntrusion from './levels/quantumIntrusion/pages/QuantumIntrusion';
 import QuantumIntrusionTipsAndTricks from './levels/quantumIntrusion/componenets/QuantumIntrusionTipsAndTricks';
 import MysticMatrix from './levels/mysticMatrix/pages/MysticMatrix';
+import MysticMatrixTipsAndTricks from './levels/mysticMatrix/components/MysticMatrixTipsAndTricks';
 
 const App = () => {
   return (
@@ -33,6 +34,7 @@ const App = () => {
       <Route path='quantumIntrusion' element = {<QuantumIntrusion/>}/>
       <Route path='quantum-intrusion/quantum-intrusion-tips-and-tricks' element = {<QuantumIntrusionTipsAndTricks/>}/>
       <Route path='mysticMatrix' element={<MysticMatrix/>}/>
+      <Route path='mysticMatrix/mystic-matrix-tips-and-tricks' element={<MysticMatrixTipsAndTricks/>}/>
       <Route path="*" element={<>nowhere to go</>} />
     </Routes>
   );

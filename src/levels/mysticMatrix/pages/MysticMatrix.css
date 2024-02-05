@@ -1,0 +1,94 @@
+.mystic-matrix-container{
+    min-height: 100vh;
+    width: 100%;
+    padding: 2em;
+    background-color: #000017;
+    color: rgb(124, 167, 14);
+    font-size: 1.1em;
+}
+.mystic-matrix-heading{
+    font-size: 2.5em;
+    color: rgb(124, 167, 14);
+}
+.mystic-matrix-data{
+    min-height: 100vh;
+    width : 100%;
+    padding: 4vh;
+    border: 1px solid purple;
+    border-radius: 15px;
+}
+.mystic-matrix-image{
+    height: 34em;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 5vh;
+}
+.mystic-matrix-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.mystic-matrix-para{
+    margin-bottom: 1em;
+}
+.mystic-matrix-rules{
+    color: rgb(158, 5, 158);
+    margin-bottom: 1em;
+}
+.mystic-matrix-help{
+    margin-top: 2vh;
+    color: rgb(158, 5, 158);
+}
+.mystic-matrix-help-button{
+    background-color: transparent;
+    font-size: 1em;
+    color: rgb(5, 138, 158);
+    border : none;
+}
+.mystic-matrix-operations{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.mystic-matrix-inputs{
+    width: fit-content;
+    margin: 5vh 0;
+    display: flex;
+    gap: 10px;
+}
+.mystic-matrix-inputs input{
+    text-align: center;
+    width: 2.5em;
+    border: 1px solid purple;
+    background-color: rgba(128, 0, 128, 0.212);
+    border-radius: 5px;
+    color: rgb(182, 250, 10);
+    height: 2.2em;
+    outline: none;
+}
+.mystic-matrix-inputs label{
+    margin-left: 1em;
+}
+.mystic-matrix-buttons{
+    display: flex;
+    gap: 20px;
+}
+.mystic-matrix-buttons button{
+   height: 2.5em;
+   padding: .6em;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: rgb(182, 250, 10);
+   background-color: rgb(5, 138, 158);
+   border: none;
+   border-radius: 10px;
+   transition: all ease .6s;
+   
+}
+.mystic-matrix-buttons button:hover{
+    background-color: transparent;
+    border: 1px solid rgb(182, 250, 10);
+    color: rgb(5, 138, 158);;
+}

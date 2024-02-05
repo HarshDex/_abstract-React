@@ -1,0 +1,54 @@
+.mystic-matrix-tips-and-tricks-container{
+    min-height: 100vh;
+    width: 100%;
+    padding: 5vh;
+    background-color: #000017;
+    color: white;
+    font-size: 1.2em;
+}
+.mystic-matrix-help-heading{
+    font-size: 1.5em;
+    color: rgb(133, 4, 133);
+}
+.quantum-encryption{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding : 3vh;
+    border: 1px solid rgb(124, 167, 14);
+    border-radius: 10px;
+}
+.quantum-encryption-heading{
+    color: rgb(186, 159, 53);
+}
+.mystic-matrix-content h2{
+    color: purple;
+    font-size: 1.4em;
+    margin: 2vh 0;
+}
+.mystic-matrix-content h3{
+    margin-bottom : .3em;
+    color : rgb(124, 167, 14);
+}
+.mystic-matrix-content p{
+    color: rgb(186, 159, 53);
+}
+.return-to-quest{
+    align-self: center;
+}
+.return-to-quest button{
+    margin: 1em 0;
+    padding: .4em 2em;
+    color: rgb(182, 250, 10);
+    background-color: rgb(4, 30, 33);
+    border : none;
+    border-radius: 10px;
+    transition: all ease .4s;
+    width: 20em;
+}
+.return-to-quest button:hover{
+    background-color: transparent;
+    border: 1px solid rgb(182, 250, 10);
+    color: rgb(5, 138, 158);;
+}
