@@ -7,7 +7,7 @@ import './MysticMatrix.css'
 import MysticMatrixAsset from '../../../assets/MysticMatrixAsset.jpg'
 const MysticMatrix = () => {
   const {para1,para2,para3} = useSelector((state)=>state.Mystic.mysticMatrixData);
-  const [loading,setLoading] = useState(false);
+  const [loading,setLoading] = useState(true);
   const [ansA,setAnsA] = useState('');
   const [ansB,setAnsB] = useState('');  
   const [ansC,setAnsC] = useState('');
@@ -24,8 +24,8 @@ const MysticMatrix = () => {
     if(event.key === 'Enter') 
       onMysticSubmitHandler();
   }
-  const onInputChangeHandler = (e) => {
-    const { name, value } = e.target;
+  const onInputChangeHandler = (event) => {
+    const { name, value } = event.target;
     if (name === 'A') setAnsA(value);
     else if (name === 'B') setAnsB(value);
     else if (name === 'C') setAnsC(value);

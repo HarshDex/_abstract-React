@@ -16,7 +16,6 @@ const MysticMatrixTipsAndTricks = () => {
               <h2>The key features of quantum encryption include:-</h2>
               <h3>Quantum Key Distribution (QKD):</h3>
               <p>QKD enables the exchange of cryptographic keys between parties in a way that is theoretically secure against any computational attack, including those using powerful quantum computers.The act of observing a quantum system inherently alters its state, making any eavesdropping attempts detectable.</p>
-              
               <h3>Entanglement-Based Cryptography:</h3>
               <p>Quantum entanglement ensures that the state of one particle is directly correlated with the state of another, regardless of the distance between them.Changes to one entangled particle instantaneously affect the other, providing a tamper-evident communication channel.</p>
               <h2>Tips for Solving Mystic Matrix:-</h2>
