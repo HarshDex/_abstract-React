@@ -86,12 +86,12 @@ const Homepage = () => {
               <i className="ri-play-fill"></i>
             </button>
           </Link>
-          <Link to={'/fishGuardian'}>
+          {/* <Link to={'/fishGuardian'}>
             <button>
               <p>Fish Guardian</p>
               <i className="ri-play-fill"></i>
             </button>
-          </Link>
+          </Link> */}
           <Link to={'/utopianPrivacy'}>
             <button>
               <p>Utopian Privacy Challenge</p>
@@ -119,6 +119,12 @@ const Homepage = () => {
           <Link to={'/mysticMatrix'}>
             <button>
               <p>Mystic Matrix</p>
+              <i className="ri-play-fill"></i>
+            </button>
+          </Link>
+          <Link to={'/phantomAttack'}>
+            <button>
+              <p>Phantom Attack</p>
               <i className="ri-play-fill"></i>
             </button>
           </Link>

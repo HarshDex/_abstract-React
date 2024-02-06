@@ -16,6 +16,8 @@ import QuantumIntrusion from './levels/quantumIntrusion/pages/QuantumIntrusion';
 import QuantumIntrusionTipsAndTricks from './levels/quantumIntrusion/componenets/QuantumIntrusionTipsAndTricks';
 import MysticMatrix from './levels/mysticMatrix/pages/MysticMatrix';
 import MysticMatrixTipsAndTricks from './levels/mysticMatrix/components/MysticMatrixTipsAndTricks';
+import PhantomAttack from './levels/phantomAttack/pages/PhantomAttack';
+import PhantomAttackTipsAndTricks from './levels/phantomAttack/components/PhantomAttackTipsAndTricks';
 
 const App = () => {
   return (
@@ -35,6 +37,8 @@ const App = () => {
       <Route path='quantum-intrusion/quantum-intrusion-tips-and-tricks' element = {<QuantumIntrusionTipsAndTricks/>}/>
       <Route path='mysticMatrix' element={<MysticMatrix/>}/>
       <Route path='mysticMatrix/mystic-matrix-tips-and-tricks' element={<MysticMatrixTipsAndTricks/>}/>
+      <Route path='phantomAttack' element={<PhantomAttack/>}/>
+      <Route path='phantomAttack/phantom-attack-tips-and-tricks' element={<PhantomAttackTipsAndTricks/>}/>
       <Route path="*" element={<>nowhere to go</>} />
     </Routes>
   );

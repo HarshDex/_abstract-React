@@ -9,6 +9,7 @@ import {SecretVaultSlice} from "./slice/SecretVaultSlice";
 import {CryptalogueSlice} from "./slice/CryptalogueSlice";
 import {QuantumIntrusionSlice} from './slice/QuantumIntrusionSlice'
 import { MysticMatrixSlice } from "./slice/MysticMatrixSlice";
+import {PhantomAttackSlice} from "./slice/PhantomAttackSlice";
 export const store = configureStore({
     reducer : {
         Password : PasswordSlice.reducer,
@@ -21,5 +22,6 @@ export const store = configureStore({
         Cryptalogues : CryptalogueSlice.reducer,
         Quantum : QuantumIntrusionSlice.reducer,
         Mystic : MysticMatrixSlice.reducer,
+        Phantom : PhantomAttackSlice.reducer,
     }
 })

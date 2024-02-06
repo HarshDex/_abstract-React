@@ -1,0 +1,55 @@
+.phantom-attack-tips-and-tricks{
+    min-height: 100vh;
+    width: 100%;
+    padding: 4vh;
+    background-color: rgb(0, 19, 2);
+    color: rgba(255, 255, 255, 0.76);
+}
+.phatom-attack-tips-data{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    padding: 4vh;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+.phantom-attack-social-heading{
+    font-size: 1.5em;
+    margin-bottom: 4vh;
+    color: rgb(167, 255, 167);
+}
+.types-of-social-attacks h4{
+    margin: 5vh 0;
+    font-weight: 500;
+    color: pink;
+}
+.social-engineering-def{
+    margin-top: 5vh;
+}
+.types-of-social-attacks h2{
+    color: rgb(167, 255, 167);
+    font-size: 2em;
+}
+.types-of-social-attacks h3{
+    margin-top: 3vh;
+    color: rgb(185, 185, 245);
+}
+.phatom-attack-tips-return{
+    align-self: center;
+}
+.phatom-attack-tips-return button{
+    margin-top: 5vh;
+    height: 6vh;
+    width: 12em;
+    border-radius: 5px;
+    border: none;
+    transition: all ease .5s;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.818);
+}
+.phatom-attack-tips-return button:hover{
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
