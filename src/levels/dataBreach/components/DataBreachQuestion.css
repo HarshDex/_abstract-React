@@ -61,9 +61,15 @@
   }
   
   /* Add this class for styling correct answers */
-  .correct-answer {
+  /* .correct-answer {
     color: #2ecc71; /* Green color for correct answers */
-  }
+  /* }
+   */
+   /* 
   .incorrect-answer{
     color: rgba(255, 0, 0, 0.703);
+  } */
+  .data-breach-result{
+    z-index: 99;
+    margin-top: 5vh;
   }

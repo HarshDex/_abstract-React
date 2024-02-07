@@ -1,28 +1,31 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setCurrentIndex, setIsAnswered } from '../../../redux/slice/DataBreachSlice';
+import { resetLevel, setCurrentIndex, setIsAnswered,setIsCorrect} from '../../../redux/slice/DataBreachSlice';
 import './DataBreachQuestion.css';
 import { Link } from 'react-router-dom';
-
+import {setIsAttempted} from '../../../redux/slice/DataBreachSlice'
 const DataBreachQuestion = ({ question, answer }) => {
   const [inputAnswer, setInputAnswer] = useState('');
-  const [isCorrect, setIsCorrect] = useState(false);
   const [clickSubmit, setClickSubmit] = useState(false);
-
   const dispatch = useDispatch();
   const currentIndex = useSelector((state) => state.DataBreach.currentIndex);
+  const {isCorrect} = useSelector((state)=>state.DataBreach.questions[currentIndex])
   const totalData = useSelector((state) => state.DataBreach.questions.length);
   const isAnswered = useSelector((state) => state.DataBreach.questions[state.DataBreach.currentIndex].isAnswered);
   useEffect(()=>{
     console.log(`for current index :${currentIndex}`  + isAnswered);
   },[currentIndex])
+  useEffect(()=>{
+    console.log('answer : ',isCorrect);
+  },[isCorrect])
   const onDataInputChangeHandler = (event) => {
     setInputAnswer(event.target.value);
   };
+  const {isAttempted} = useSelector((state)=>state.DataBreach.questions[currentIndex])
   const onDataBreachSubmit = () => {
+    dispatch(setIsAttempted());
     setClickSubmit(true);
-    setIsCorrect(inputAnswer.toLowerCase() === answer.toLowerCase());
-    dispatch(setIsAnswered(true));
+    dispatch(setIsCorrect(inputAnswer))
   };
 
   const onNextButtonClick = () => {
@@ -65,7 +68,9 @@ const DataBreachQuestion = ({ question, answer }) => {
           {isCorrect ? (
             currentIndex === totalData - 1 ? (
               <Link to="/">
-                <button className="data-breach-goTo-next">Continue</button>
+                <button className="data-breach-goTo-next"
+                onClick={()=>{dispatch(resetLevel())}}
+                >Continue</button>
               </Link>
             ) : (
               <button onClick={onNextButtonClick}>Next Question</button>
@@ -74,6 +79,16 @@ const DataBreachQuestion = ({ question, answer }) => {
             <></>
           )}
           <button onClick={downloadPdf}>Download PDF</button>
+        </div>
+        <div className={isCorrect ? 'correct' : 'wrong'}>{
+          isAttempted
+          ? (
+            isCorrect
+            ? (<p className='data-breach-result'>You Made it correct! Move to next question</p>) 
+            : (<p className='data-breach-result'>You are wrong! Try a little harder</p>)
+          ) 
+          : (<></>)
+        }
         </div>
       </div>
     </div>

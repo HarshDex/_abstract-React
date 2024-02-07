@@ -9,6 +9,7 @@ const DataBreach = () => {
   const dispatch = useDispatch();
   const securityQuestions = useSelector((state) => state.DataBreach.questions);
   const currentIndex = useSelector((state) => state.DataBreach.currentIndex);
+  // const {isAttempted,isCorrect} = useSelector((state)=>state.DataBreach.questions[currentIndex]);
   const [loading,setLoading] = useState(true);
   useEffect(()=>{
     setTimeout(()=>{

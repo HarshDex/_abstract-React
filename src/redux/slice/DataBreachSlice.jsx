@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 export const securityQuestions = [
   {
-    question: "Determine the IP address associated with the unauthorized access attempt in the Game Activity Log.",
+    question: "Determine the IP address associated with the multiple unsuccessfull attempts.",
     answer: "192.168.1.100",
     isAnswered : false,
   },
@@ -37,17 +37,32 @@ export const DataBreachSlice = createSlice({
       userAnswer: '',
       isAnswered: q.isAnswered,
       isCorrect: false,
+      isAttempted : false,
     })),
   },
   reducers: {
     setCurrentIndex: (state, action) => {
+      state.isAnswered = false;
       state.currentIndex = action.payload;
+    },
+    setIsCorrect : (state,action) =>{
+      state.questions[state.currentIndex].isCorrect = action.payload === state.questions[state.currentIndex].answer
     },
     setIsAnswered : (state,action) => {
       state.questions[state.currentIndex].isAnswered = action.payload
+    },
+    setIsAttempted : (state)=>{
+      state.questions[state.currentIndex].isAttempted = true
+    },
+    resetLevel : (state)=>{
+      state.currentIndex = 0;
+      securityQuestions.forEach((elem,index)=>{
+        state.questions[index].isCorrect = false;
+        state.questions[index].isAttempted = false;
+      })
     }
-  },
+  },  
 });
 
-export const { setCurrentIndex,setIsAnswered} = DataBreachSlice.actions;
+export const { setCurrentIndex,setIsAnswered,setIsAttempted,setIsCorrect,resetLevel} = DataBreachSlice.actions;
 export default DataBreachSlice.reducer;
